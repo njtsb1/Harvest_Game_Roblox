@@ -14,7 +14,7 @@ Creating a Harvest game from scratch with Roblox Studio, bringing together every
 
 ## Technologies Used
 
-- **HTML**` - main markup and UI
+- **HTML** - main markup and UI
 - **CSS** - styles using Flexbox and responsive rules
 - **JavaScript** - game logic, rendering loop, theme and language handling
 
