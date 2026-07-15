@@ -1,0 +1,75 @@
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harvest Game Prototype</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <header class="app-header" role="banner">
+    <h1 id="app-title">Harvest Game</h1>
+
+    <div class="controls" role="region" aria-label="Controls">
+      <label for="lang-select" class="visually-hidden" id="lang-label">Language</label>
+      <select id="lang-select" aria-labelledby="lang-label">
+        <option value="en-US">English</option>
+        <option value="pt-BR">Português (BR)</option>
+        <option value="es-ES">Español (ES)</option>
+      </select>
+
+      <button id="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+        <svg id="icon-sun" class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+          <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.2" y1="4.2" x2="5.6" y2="5.6"></line>
+            <line x1="18.4" y1="18.4" x2="19.8" y2="19.8"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.2" y1="19.8" x2="5.6" y2="18.4"></line>
+            <line x1="18.4" y1="5.6" x2="19.8" y2="4.2"></line>
+          </g>
+        </svg>
+
+        <svg id="icon-moon" class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="app-main" role="main">
+    <section class="game-area" aria-labelledby="game-heading">
+      <h2 id="game-heading" class="visually-hidden">Game Area</h2>
+
+      <div class="canvas-wrap">
+        <canvas id="game-canvas" width="800" height="480" role="img" aria-label="Farm grid"></canvas>
+      </div>
+
+      <aside class="hud" aria-live="polite" aria-atomic="true">
+        <div class="stat">
+          <span class="label" id="coins-label">Coins</span>
+          <span class="value" id="coins-value">0</span>
+        </div>
+
+        <div class="instructions" id="instructions">
+          <p>Click a ripe tile to harvest.</p>
+          <p>Tiles grow over time.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="accessibility-controls" aria-label="Accessible controls">
+      <h3 class="visually-hidden">Tile Controls</h3>
+      <div id="tile-buttons" class="tile-buttons" role="grid" aria-label="Tiles grid"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <small id="credits">Prototype built with HTML5 Canvas</small>
+  </footer>
+
+  <script src="./src/script.js" defer></script>
+</body>
+</html>
